@@ -1,1 +1,0 @@
-{"uuid":"b255c4da-3f64-4a68-9cdc-b92cf3d70135","name":"Test_Automation_OrangHRM","children":["74b676aa-f0eb-472c-a8a2-fa4c33aad1bc"],"befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1728283200646,"stop":1728283204666}],"afters":[],"start":1728283200626,"stop":1728283204871}

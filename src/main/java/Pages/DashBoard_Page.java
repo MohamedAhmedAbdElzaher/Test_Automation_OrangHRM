@@ -1,12 +1,11 @@
 package Pages;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
 
 import java.time.Duration;
 import java.util.List;
@@ -29,12 +28,18 @@ public class DashBoard_Page {
 
     public void wait(By locator ){
         Fwait = new FluentWait(driver);
-        Fwait.withTimeout(Duration.ofSeconds(10));
+        Fwait.withTimeout(Duration.ofSeconds(5));
         Fwait.pollingEvery(Duration.ofSeconds(1));
         Fwait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(locator));
+        Fwait.ignoring(NoSuchElementException.class);
     }
     public boolean isDashboardLoaded(){
-        wait(dashboard);
+        try {wait(dashboard);
+        }catch (TimeoutException e)
+        {
+            return false;
+        }
+
         return driver.findElement(dashboard).isDisplayed();
     }
     public List<WebElement> getMenuList (){
