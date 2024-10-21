@@ -1,6 +1,7 @@
 import Pages.Admin_page;
 import Pages.DashBoard_Page;
 import Pages.Login_Page;
+import Pages.PIM_page;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Attachment;
 import org.openqa.selenium.NoSuchElementException;
@@ -19,6 +20,7 @@ public class Login_Testing_withDataProvider {
     private Login_Page loginPage;
     private DashBoard_Page dashboardPage;
     private Admin_page adminPage;
+    private PIM_page pimPage;
 
     @BeforeTest
     public void setUp() {
@@ -28,7 +30,7 @@ public class Login_Testing_withDataProvider {
         loginPage = new Login_Page(driver);
         dashboardPage = new DashBoard_Page(driver);
         adminPage = new Admin_page(driver);
-
+        pimPage = new PIM_page(driver);
     }
 
     @Test()
@@ -42,11 +44,10 @@ public class Login_Testing_withDataProvider {
                 {"User16", "user1234"}
         };
         for (int i = 0; i < element.length; i++) {
-            adminPage.createNewUser(element[i][0], element[i][1]);
+            pimPage.createNewUser(element[i][0], element[i][1]);
         }
         loginPage.logOut();
-//        loginPage.login_Page(User, Password);
-//        loginPage.logOut();
+
     }
 
     @Test(dataProvider = "dataProvider")
@@ -82,9 +83,8 @@ public class Login_Testing_withDataProvider {
     public Object[][] dataProvider() {
 
         return new Object[][]{
-                {"Admin", "admin123", true},
-                {"User12", "user1234", true},
-                {"User15", "user12350", true},
+                {"User1", "user123", true},
+                {"User15", "user123", true},
                 {"", "user123", false},
                 {"User15", "", false},
                 {"", "", false},

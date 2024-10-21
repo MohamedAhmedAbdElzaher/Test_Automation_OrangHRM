@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="AutomationTesting" verbose="1">
+    <test name="Login Testing">
+        <classes>
+            <class name="Login_Testing"/>
+        </classes>
+    </test>
+    <test name="Admin Testing">
+        <classes>
+            <class name="Admin_Testing"/>
+        </classes>
+    </test>
+
+    <test name="PIM Testing">
+        <classes>
+            <class name="PIM_Testing"/>
+        </classes>
+    </test>
+    <test name="Dashboard Testing">
+        <classes>
+            <class name="DashBoard_Testing"/>
+        </classes>
+    </test>
+    <test name="Login Testing with Data Provider">
+        <classes>
+            <class name="Login_Testing_withDataProvider"/>
+        </classes>
+    </test>
+
+</suite> <!-- Suite -->
+
+

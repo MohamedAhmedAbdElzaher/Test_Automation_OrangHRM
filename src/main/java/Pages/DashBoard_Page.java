@@ -60,21 +60,5 @@ public class DashBoard_Page {
         wait(dashboard);
         return driver.findElement(customizeBt).isDisplayed();
     }
-//    public List<String> listWedhetNames (){
-//         List<String> wList ;
-//        for(int i= 0; i<menuListSize(); i++ ){
-//            wList.indexOf(i) = menus.contains("")
-//        }
-//    }
-//    public boolean  isMyActionsLoaded(){
-//        wait(dashboard);
-//         menus.getFirst().getText();
-//    }
-//    public boolean isManagerMetricsDisplayed() {
-//        return managerMetrics.isDisplayed();
-//    }
-//
-//    public boolean isEmployeeLeaveRequestsDisplayed() {
-//        return employeeLeaveRequests.isDisplayed();
-//    }
+
 }
