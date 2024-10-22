@@ -7,12 +7,10 @@ set REPORT_DIR=allure-report
 REM Run TestNG tests
 echo Running tests...
 pause
-echo hhhhhhhhhhh.
 mvn test
 pause
 REM Generate Allure report
-allure generate %RESULTS_DIR%  --clean -o %REPORT_DIR%
-
+allure generate --single-file --clean -o allure-report
 REM Check if the report was generated successfully
 if exist %REPORT_DIR%\index.html (
     echo Report generated successfully.
