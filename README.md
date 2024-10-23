@@ -50,7 +50,6 @@ This project is licensed under the MIT License. See the LICENSE file for more in
 Contact:
 For any questions or support, please contact:
 - Name: Mohamed Ahmed Abd Elzaher
-- Email: your-email@example.com
 - GitHub: https://github.com/MohamedAhmedAbdElzaher
 
 Thank you for checking out this project! Your feedback and contributions are greatly appreciated.
